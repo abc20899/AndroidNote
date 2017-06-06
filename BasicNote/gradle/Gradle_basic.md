@@ -42,6 +42,7 @@ gradlw wrapper 包含一些脚本文件和针对不同系统下面的运行文�
 gradle wrapper --gradle-version 2.4
 ```
 它会创建如下目录结构:
+
 ![](../images/gradle_basic_wrapper.png)
 wrapper 就是我们使用命令行编译的开始。下面我们看看 wrapper 有什么样的作用。
 ## Gradle basics
