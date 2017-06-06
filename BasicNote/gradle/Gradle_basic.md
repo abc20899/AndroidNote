@@ -25,7 +25,9 @@ allprojects{
 2. allprojects:中定义的属性会被应用到所有 moudle 中，但是为了保证每个项目的独立性，我们一般不会在这里面操作太多共有的东西
 
 * **每个项目单独的 build.gradle**：针对每个moudle 的配置，如果这里的定义的选项和顶层build.gradle定义的相同，后者会被覆盖。典型的 配置内容如下：
+
 ![android配置](../images/gradle_basic_android.png)
+
 1. apply plugin:第一行代码应用了Android 程序的gradle插件，作为Android 的应用程序，这一步是必须的，因为plugin中提供了Android 编译、测试、打包等等的所有task。
 2. android:这是编译文件中最大的代码块，关于android 的所有特殊配置都在这里，这就是又我们前面的声明的 plugin 提供的。
 * defaultConfig就是程序的默认配置，注意，如果在AndroidMainfest.xml里面定义了与这里相同的属性，会以这里的为主。
@@ -73,11 +75,11 @@ Gradle 会根据build 文件的配置生成不同的task，我们可以直接单
 
 # Repositories
 Repositories 就是代码仓库，这个相信大家都知道，我们平时的添加的一些 dependency 就是从这里下载的，Gradle 支持三种类型的仓库：Maven,Ivy和一些静态文件或者文件夹。在编译的执行阶段，gradle 将会从仓库中取出对应需要的依赖文件，当然，gradle 本地也会有自己的缓存，不会每次都去取这些依赖。
-
 gradle 支持多种 Maven 仓库，一般我们就是用共有的jCenter就可以了。
 有一些项目，可能是一些公司私有的仓库中的，这时候我们需要手动加入仓库连接：
 
 ![](../images/gradle_basic_reposi1.png)
+
 如果仓库有密码，也可以同时传入用户名和密码
 
 ![](../images/gradle_basic_reposi2.png)
@@ -161,6 +163,7 @@ android 默认的带有Debug和Release两种编译类型。比如我们现在有
 ![](../images/gradle_flavor2.png)
 
 # Resource merge priority
+
 ![](../images/gradle_basic_priority.png)
 
 在Build Type中定义的资源优先级最大，在Library 中定义的资源优先级最低。
