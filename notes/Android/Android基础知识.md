@@ -32,7 +32,7 @@ onSaveInstanceState()方法，通过bundle
 ### ListView 优化
 
 * 重用 view，不用每次都加载
-* ViewHolder，对空间实例进行缓存
+* ViewHolder，对UI控件实例进行缓存
 
 ### 怎么实现ListView多种布局？
 
@@ -73,8 +73,6 @@ public int getItemViewType(int position) {
 * frame 帧动画
     * AnimationDrawable 控制
     * animation-list xml布局
-    
-## JNI怎么使用（没写）
 
 ## OOM（内存不足、泄漏、溢出）
 
