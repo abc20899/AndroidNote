@@ -35,17 +35,13 @@ allprojects{
 
 # Gradle Wrapper
 Gradle 不断的在发展，新的版本难免会对以往的项目有一些向后兼容性的问题，这个时候,gradle wrapper就应运而生了。
-
 gradlw wrapper 包含一些脚本文件和针对不同系统下面的运行文件。wrapper 有版本区分，但是并不需要你手动去下载，当你运行脚本的时候，如果本地没有会自动下载对应版本文件。
-
 在不同操作系统下面执行的脚本不同，在 Mac 系统下执行./gradlew ...，在windows 下执行gradle.bat进行编译。
-
 如果你是直接从eclipse 中的项目转换过来的，程序并不会自动创建wrapper脚本，我们需要手动创建。在命令行输入以下命令即可
-
 ```
 gradle wrapper --gradle-version 2.4
 ```
-它会创建如下目录结构：
+它会创建如下目录结构:
 ![](../images/gradle_basic_wrapper.png)
 wrapper 就是我们使用命令行编译的开始。下面我们看看 wrapper 有什么样的作用。
 ## Gradle basics
